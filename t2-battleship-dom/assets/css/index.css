@@ -1,1 +1,53 @@
-/* Your code here */
+body {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+#board {
+  background-color: #ddd;
+  border-radius: 5px;
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  grid-template-rows: repeat(9, 1fr);
+  gap: 5px;
+  height: 80vh;
+  padding: 10px;
+  width: 80vh;
+}
+.cell {
+  align-items: center;
+  background-color: #fff;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 2em;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+}
+div.hit {
+  background-color: rgb(105, 161, 105);
+}
+div.miss {
+  background-color: rgb(226, 61, 61)
+}
+
+#winModal {
+  align-items: center;
+  background-color: #fff;;
+  box-shadow: 5px 5px 5px #000;
+  border-radius: 5px;
+  display: flex;
+  font-size: 2em;
+  height: 25vw;
+  justify-content: center;
+  position: absolute;
+  top:40vh;
+  width: 50vw;
+}
+#controls {
+  margin-bottom: 10px;
+}
+span {
+  display: none;
+}
