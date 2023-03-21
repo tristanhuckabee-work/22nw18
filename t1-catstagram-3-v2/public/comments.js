@@ -5,7 +5,20 @@ export const createCommentSection = () => {
     const commentsList = createCommentsList();
 
     container.appendChild(commentForm);
-    container.appendChild(commentsList);
+
+    let commentsLS = localStorage.getItem('comments');
+    if (commentsLS) {
+      let myComments = document.createElement('div');
+      myComments.classList.add('comments');
+      myComments.style = "border: 1px solid grey; height: 400px; width: 80%; margin: 10px; padding: 5px; overflow: scroll;"
+      // console.log(commentsLS);
+      myComments.innerHTML = `${commentsLS}`;
+      console.log(myComments);
+      container.appendChild(myComments);
+    } else {
+      container.appendChild(commentsList);
+      localStorage.setItem('comments', commentsList);
+    }
 };
 
 const createCommentsList = () => {
@@ -96,15 +109,19 @@ const createComment = (commentText) => {
         // Remove comment from HTML DOM
         newCommentContainer.remove();
     });
-
+    
     newCommentContainer.appendChild(newComment);
     newCommentContainer.appendChild(deleteButton);
     const comments = document.querySelector(".comments");
     comments.appendChild(newCommentContainer);
+    
+    console.log(comments);
+    localStorage.setItem('comments', comments.innerHTML);
 };
 
 
 export const resetComments = () => {
+    localStorage.removeItem('comments');
     const comments = document.querySelector(".comments");
     Array.from(comments.children).forEach(child => child.remove());
 };
