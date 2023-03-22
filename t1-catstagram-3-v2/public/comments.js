@@ -11,7 +11,6 @@ export const createCommentSection = () => {
       let myComments = document.createElement('div');
       myComments.classList.add('comments');
       myComments.style = "border: 1px solid grey; height: 400px; width: 80%; margin: 10px; padding: 5px; overflow: scroll;"
-      // console.log(commentsLS);
       myComments.innerHTML = `${commentsLS}`;
       console.log(myComments);
       container.appendChild(myComments);
