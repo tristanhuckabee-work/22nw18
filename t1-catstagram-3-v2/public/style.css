@@ -1,0 +1,45 @@
+body {
+  background-color: white;
+  font-family: sans-serif;
+  margin: 0;
+}
+img {
+  width: 50vw;
+  height: 50vw;
+  object-fit: cover;
+  border: 1px solid #d85b70;
+  border-radius: 10px;
+}
+button {
+  border: 1px solid transparent;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+}
+#upvote, #downvote {
+  width: 25vw;
+}
+#upvote, #new-kitten {
+  background-color: #65c0b7;
+}
+#downvote, .delete-button {
+  background-color: #d85b70;
+}
+.comment-form {
+  background-color: #eee;
+  width: 100vw;
+  margin: 0;
+  padding: 10px 0;
+}
+.comments {
+  width: 100vw;
+  background-color: #eee;
+}
+.comments div {
+  background-color: white;
+  border-radius: 5px;
+  padding: 1px 1px 1px 15px;
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+}
