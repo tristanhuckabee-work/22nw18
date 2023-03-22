@@ -10,7 +10,6 @@ export const createCommentSection = () => {
     if (commentsLS) {
       let myComments = document.createElement('div');
       myComments.classList.add('comments');
-      // myComments.style = "border: 1px solid grey; height: 400px; width: 80%; margin: 10px; padding: 5px; overflow: scroll;"
       myComments.innerHTML = `${commentsLS}`;
       container.appendChild(myComments);
     } else {
@@ -23,12 +22,6 @@ const createCommentsList = () => {
     // Create comments section
     const comments = document.createElement("div");
     comments.className = "comments";
-    // comments.style.border = "solid grey 1px";
-    // comments.style.height = "400px";
-    // comments.style.width = "80%";
-    // comments.style.margin = "10px";
-    // comments.style.padding = "5px";
-    // comments.style.overflow = "scroll";
 
     return comments;
 };

@@ -38,6 +38,9 @@ const createScoreDisplay = () => {
     scoreDisplay.appendChild(scoreTitle);
     scoreDisplay.appendChild(score);
 
+    if (localStorage.getItem('score')) {
+      score.innerText = localStorage.getItem('score');
+    }
     return scoreDisplay;
 };
 

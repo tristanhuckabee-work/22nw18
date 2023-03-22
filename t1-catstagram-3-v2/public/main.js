@@ -38,17 +38,7 @@ const fetchImage = async () => {
     const kittenImg = document.querySelector("img");
     kittenImg.src = kittenImgUrl;
     localStorage.setItem('image', kittenImgUrl);
-    // let savedKittyImage = localStorage.getItem('image');
-    // if (!savedKittyImage) {
-    //   localStorage.setItem('image', kittenImgUrl);
-    // } else {
-    //   kittenImg.src = savedKittyImage;
-    //   // After the image is finished loading, reset the score and comments
-    //   kittenImg.addEventListener('load', () => {
-    //     resetScore();
-    //     resetComments();
-    //   });
-    // }
+    
     // After the image is finished loading, reset the score and comments
     kittenImg.addEventListener('load', () => {
       resetScore();
