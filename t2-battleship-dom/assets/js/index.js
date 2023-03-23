@@ -27,7 +27,7 @@ function makeBoard(bClass) {
           let win = bClass.isGameOver();
           if (win) {
             let winModal = document.querySelector('span');
-            winModal.display = 'inline-block';
+            winModal.style.display = 'inline-block';
           }
         }
       })

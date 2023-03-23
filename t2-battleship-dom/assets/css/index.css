@@ -1,11 +1,18 @@
 body {
   align-items: center;
+  background-color: #333333;
+  /* background-image: url('https://img.freepik.com/free-vector/wavy-smooth-lines-pattern-background_1017-14204.jpg'); */
+  background-position: center;
   display: flex;
   flex-direction: column;
+  font-family: sans-serif;
   justify-content: flex-start;
+
+}
+h1 {
+  color: white;
 }
 #board {
-  background-color: #ddd;
   border-radius: 5px;
   display: grid;
   grid-template-columns: repeat(9, 1fr);
@@ -17,7 +24,7 @@ body {
 }
 .cell {
   align-items: center;
-  background-color: #fff;
+  background-color: #cccc;
   border-radius: 5px;
   color: #fff;
   font-size: 2em;
@@ -26,28 +33,23 @@ body {
   justify-content: center;
 }
 div.hit {
-  background-color: rgb(105, 161, 105);
+  background-color: rgba(105, 161, 105, 0.75);
 }
 div.miss {
-  background-color: rgb(226, 61, 61)
-}
-
-#winModal {
-  align-items: center;
-  background-color: #fff;;
-  box-shadow: 5px 5px 5px #000;
-  border-radius: 5px;
-  display: flex;
-  font-size: 2em;
-  height: 25vw;
-  justify-content: center;
-  position: absolute;
-  top:40vh;
-  width: 50vw;
+  background-color: rgba(226, 61, 61, 0.75)
 }
 #controls {
+  color: white;
   margin-bottom: 10px;
 }
 span {
   display: none;
+}
+#reset {
+  background-color: rgba(105, 161, 105, 0.75);
+  border: 1px solid transparent;
+  border-radius: 5px;
+  color: white;
+  margin: 0 10px;
+  padding: 5px;
 }
