@@ -32,6 +32,9 @@ h1 {
   display: flex;
   justify-content: center;
 }
+.cell:hover {
+  filter: brightness(90%);
+}
 div.hit {
   background-color: rgba(105, 161, 105, 0.75);
 }
