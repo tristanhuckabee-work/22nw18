@@ -1,0 +1,43 @@
+/* Your code here */
+body {
+align-items:center;
+display: flex;
+flex-direction: column;
+justify-content: flex-start;
+}
+#board {
+  align-content: center;
+  background-color: black;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  height: 70vh;
+  justify-content: center;
+  margin: 10px 0;
+  padding: 2px;
+  width: 70vh;
+}
+.square {
+  background-color: white;
+  height: 100%;
+  width: 100%;
+}
+img {
+  display: none;
+}
+button {
+background-color: #a00;
+border: none;
+border-radius: 5px;
+color: white;
+cursor: pointer;
+padding: 5px;
+width: 10vw;
+}
+button:hover {
+  background-color: #800;
+}
+button[disabled] {
+  background-color: #aaa;
+}
